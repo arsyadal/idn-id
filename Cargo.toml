@@ -1,0 +1,23 @@
+[package]
+name = "idn-id"
+version = "0.1.0"
+edition = "2021"
+authors = ["Indonesian Rust Community <developer@indonesia.rs>"]
+description = "A fast, lightweight, and zero-dependency validator and parser for Indonesian identity numbers (NIK, NPWP, Phone numbers, License Plates)."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/your-username/idn-id"
+homepage = "https://github.com/your-username/idn-id"
+documentation = "https://docs.rs/idn-id"
+keywords = ["indonesia", "nik", "npwp", "validator", "parser"]
+categories = ["data-structures", "parser-implementations", "no-std"]
+
+[features]
+default = ["std"]
+std = []
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { version = "1.0", default-features = false, features = ["derive", "alloc"], optional = true }
+
+[dev-dependencies]
